@@ -12,11 +12,11 @@ with open('LICENSE') as f:
 setup(
     name='Leetcode',
     version='0.1.0',
-    description='Project framework for Leetcode solutions',
+    description='Leetcode solutions in Python 3',
     long_description=readme,
     author='Huajian Mao',
     author_email='huajianmao@gmail.com',
-    url='https://github.com/huajianmao/leetcode/tree/python3',
+    url='https://github.com/huajianmao/pyleet',
     license=license,
     packages=find_packages(exclude=('tests', 'docs'))
 )

@@ -12,9 +12,8 @@ The test cases uses the default `unittest` framework.
  - `src/solutions`: will holds all your solutions.
   The code are in the same code format as the leetcode requires,
   so when you passed your own unit test cases, it can be directly copied and pasted on the leetcode OJ input box.
+  It also holds the test cases for the solution.
  - `src/utils`: contains some of the utilities for the Leetcode solutions.
- - `tests`: Your test cases for the solutions would be here.
-  You may start with `test_a0000blank.py` by coping it to `test_a00id_name.py`, and then write test cases.
  - `Makefile`: You may run `make init` first to run the dependencies, and test your solutions with `make test`.
  
  
