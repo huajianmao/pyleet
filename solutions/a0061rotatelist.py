@@ -33,16 +33,18 @@ from utils.list.ListNode import ListNode
 
 class Solution:
   def rotateRight(self, head: ListNode, k: int) -> ListNode:
-    if (not head or k == 0): return head
+    if not head or k == 0:
+      return head
 
     size = 0
     it = head
-    while it != None:
+    while it is not None:
       size += 1
       it = it.next
 
     k %= size
-    if k == 0: return head
+    if k == 0:
+      return head
 
     skip = size - k - 1
     it = head
@@ -53,7 +55,7 @@ class Solution:
     newHead = it.next
     it.next = None
     it = newHead
-    while it.next != None:
+    while it.next is not None:
       it = it.next
 
     it.next = head

@@ -12,6 +12,7 @@ def test_generateMatrix1():
   actual = solution.generateMatrix(n)
   assert actual == expect
 
+
 def test_generateMatrix2():
   n = 2
   expect = [

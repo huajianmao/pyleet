@@ -11,6 +11,7 @@
 # PROBLEM DESCRIPTION
 ################################################
 
+
 class Solution:
     def method(self) -> int:
         return 0

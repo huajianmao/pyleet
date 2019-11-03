@@ -46,11 +46,10 @@ class Solution:
 
     result = ""
     k -= 1
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
       index = k // factorial[n - i]
       result += str(numbers[index])
-      numbers.remove(numbers[index]);
-      k -= index * factorial[n - i];
+      numbers.remove(numbers[index])
+      k -= index * factorial[n - i]
 
     return result
-

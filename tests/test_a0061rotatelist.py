@@ -3,6 +3,7 @@ from utils.list.ListNode import ListNode
 
 solution = Solution()
 
+
 def test_rotateRight1():
   head = ListNode.stringToListNode("[1, 2, 3, 4, 5]")
   k = 2

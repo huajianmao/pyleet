@@ -8,7 +8,8 @@
 #
 # DESC:
 # =====
-# Given an array of non-negative integers, you are initially positioned at the first index of the array.
+# Given an array of non-negative integers,
+# you are initially positioned at the first index of the array.
 # Each element in the array represents your maximum jump length at that position.
 # Determine if you are able to reach the last index.
 #
@@ -26,10 +27,15 @@
 ################################################
 from typing import List
 
+
 class Solution:
   def canJump(self, nums: List[int]) -> bool:
-    furthest, n = 0, len(nums)
+    furthest = 0
+    n = len(nums)
     for i, num in enumerate(nums):
-      if i + num >= n - 1: return True
-      elif num == 0 and furthest <= i: return False
-      else: furthest = max(furthest, i + num)
+      if i + num >= n - 1:
+        return True
+      elif num == 0 and furthest <= i:
+        return False
+      else:
+        furthest = max(furthest, i + num)
