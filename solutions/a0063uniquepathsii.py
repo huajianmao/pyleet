@@ -47,8 +47,8 @@ class Solution:
     n = len(obstacleGrid[0])
     if n == 0:
       return 0
-    obstacleGrid[0][0] = 1 - obstacleGrid[0][0]
 
+    obstacleGrid[0][0] = 1 - obstacleGrid[0][0]
     for i in range(1, m):
       obstacleGrid[i][0] = obstacleGrid[i - 1][0] * (1 - obstacleGrid[i][0])  # set it to 0 if the previous one is 0
     for i in range(1, n):
