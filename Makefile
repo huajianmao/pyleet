@@ -8,6 +8,6 @@ style:
 	pycodestyle .
 
 test:
-	pytest
+	pytest --cov=./
 
 check: style test

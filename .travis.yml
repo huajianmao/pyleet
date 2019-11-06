@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - 3.7
+
+before_install:
+  - python3 --version
+  - make init
+  - pip3 install codecov
+
+install:
+    - pip3 install ".[test]" . # install package + test dependencies
+
+script: make # pytest # run tests
+
+after_success:
+    - codecov # submit coverage
+

@@ -1,5 +1,8 @@
 # Leetcode solutions in Python
 
+[![Build Status](https://travis-ci.org/huajianmao/pyleet.svg?branch=master)](https://travis-ci.org/huajianmao/pyleet)
+[![codecov](https://codecov.io/gh/huajianmao/pyleet/branch/master/graph/badge.svg)](https://codecov.io/gh/huajianmao/pyleet)
+
 ## Introduction
 Solutions for Leetcode problems in Python3.
 
