@@ -1,7 +1,10 @@
 # Leetcode solutions in Python
 
+![Language](https://img.shields.io/badge/Language-Python3-green.svg?logo=Python&logoColor=yellow)
 [![Build Status](https://travis-ci.org/huajianmao/pyleet.svg?branch=master)](https://travis-ci.org/huajianmao/pyleet)
 [![codecov](https://codecov.io/gh/huajianmao/pyleet/branch/master/graph/badge.svg)](https://codecov.io/gh/huajianmao/pyleet)
+![Update](https://img.shields.io/badge/Update-Daily-green.svg)
+![Progress](https://img.shields.io/badge/progress-11%2F1250-darkred.svg)
 
 ## Introduction
 Solutions for Leetcode problems in Python3.
