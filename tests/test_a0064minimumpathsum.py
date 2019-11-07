@@ -17,7 +17,7 @@ def test_uniquePaths1():
   assert actual == expect
 
 
-def test_uniquePaths1():
+def test_uniquePaths2():
   grid = json.loads("""
     [
       [1]

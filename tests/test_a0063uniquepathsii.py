@@ -62,3 +62,24 @@ def test_uniquePaths5():
   expect = 0
   actual = solution.uniquePathsWithObstacles(obstacleGrid)
   assert actual == expect
+
+
+def test_uniquePaths6():
+  obstacleGrid = json.loads("""
+    [
+    ]
+  """)
+  expect = 0
+  actual = solution.uniquePathsWithObstacles(obstacleGrid)
+  assert actual == expect
+
+
+def test_uniquePaths7():
+  obstacleGrid = json.loads("""
+    [
+      []
+    ]
+  """)
+  expect = 0
+  actual = solution.uniquePathsWithObstacles(obstacleGrid)
+  assert actual == expect

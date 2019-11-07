@@ -26,3 +26,11 @@ def test_rotateRight3():
   actual = solution.rotateRight(head, k)
   expect = ListNode.stringToListNode("[]")
   assert ListNode.listNodeToString(actual) == ListNode.listNodeToString(expect)
+
+
+def test_rotateRight4():
+  head = ListNode.stringToListNode("[0, 1, 2]")
+  k = 3
+  actual = solution.rotateRight(head, k)
+  expect = ListNode.stringToListNode("[0, 1, 2]")
+  assert ListNode.listNodeToString(actual) == ListNode.listNodeToString(expect)

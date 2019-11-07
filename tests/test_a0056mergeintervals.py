@@ -22,3 +22,10 @@ def test_merge3():
   expect = [[1, 4]]
   acutal = solution.merge(intervals)
   assert acutal == expect
+
+
+def test_merge3():
+  intervals = []
+  expect = []
+  acutal = solution.merge(intervals)
+  assert acutal == expect

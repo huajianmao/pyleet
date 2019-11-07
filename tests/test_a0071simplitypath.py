@@ -50,3 +50,10 @@ def test_uniquePaths7():
   expect = "/"
   actual = solution.simplifyPath(path)
   assert actual == expect
+
+
+def test_uniquePaths8():
+  path = "/../../"
+  expect = "/"
+  actual = solution.simplifyPath(path)
+  assert actual == expect

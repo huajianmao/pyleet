@@ -62,8 +62,6 @@ class Solution:
       elif name == "..":
         if stack:
           del stack[-1]
-        else:
-          continue
       else:
         stack.append(name)
 
