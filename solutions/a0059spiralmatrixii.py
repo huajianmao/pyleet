@@ -31,7 +31,7 @@ class Solution:
   def generateMatrix(self, n: int) -> List[List[int]]:
     matrix = [[0 for _ in range(n)] for _ in range(n)]
     num = 1
-    for round in range((n + 1) // 2 + 1):
+    for turn in range((n + 1) // 2 + 1):
       for g in range(4):
         ox, ix, signX = g // 2, g % 2, 1
         if g >= 2:
@@ -41,9 +41,9 @@ class Solution:
         if g == 1 or g == 2:
           oy, signY = 1, -1
 
-        for i in range(n - 2 * round - 1):
-          x = signX * (round + ox * 1 + ix * i)
-          y = signY * (round + oy * 1 + iy * i)
+        for i in range(n - 2 * turn - 1):
+          x = signX * (turn + ox * 1 + ix * i)
+          y = signY * (turn + oy * 1 + iy * i)
           matrix[x][y] = num
           num += 1
 

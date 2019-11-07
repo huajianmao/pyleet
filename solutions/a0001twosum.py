@@ -27,10 +27,10 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        dict = {}
+        dic = {}
         for index, num in enumerate(nums):
             pair = target - num
-            if pair in dict:
-                return [dict[pair], index]
+            if pair in dic:
+                return [dic[pair], index]
             else:
-                dict[num] = index
+                dic[num] = index

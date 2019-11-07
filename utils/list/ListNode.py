@@ -10,9 +10,9 @@ class ListNode:
     self.next = None
 
   @classmethod
-  def stringToListNode(cls, input):
+  def stringToListNode(cls, string):
     # Generate list from the input
-    numbers = json.loads(input)
+    numbers = json.loads(string)
 
     # Now convert that list into linked list
     dummyRoot = ListNode(0)

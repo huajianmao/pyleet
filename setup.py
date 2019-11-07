@@ -7,7 +7,7 @@ with open('README.md') as f:
     readme = f.read()
 
 with open('LICENSE') as f:
-    license = f.read()
+    mylicense = f.read()
 
 setup(
     name='Leetcode',
@@ -17,6 +17,6 @@ setup(
     author='Huajian Mao',
     author_email='huajianmao@gmail.com',
     url='https://github.com/huajianmao/pyleet',
-    license=license,
+    license=mylicense,
     packages=find_packages(exclude=('tests', 'docs'))
 )
