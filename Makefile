@@ -6,6 +6,7 @@ init:
 
 update:
 	python3 progress.py
+	git diff README.md
 
 style:
 	pycodestyle .
@@ -13,4 +14,4 @@ style:
 test:
 	pytest --cov=./
 
-check: update style test
+check: style test
