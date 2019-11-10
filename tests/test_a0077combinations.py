@@ -1,12 +1,7 @@
 from solutions.a0077combinations import Solution
+from utils.listutil import ListUtil
 
 solution = Solution()
-
-
-def sortCombine(items):
-  items.sort()
-  for it in items:
-    it.sort()
 
 
 def test_combine():
@@ -21,6 +16,6 @@ def test_combine():
     [1, 4],
   ]
   acutal = solution.combine(n, k)
-  sortCombine(expect)
-  sortCombine(acutal)
+  ListUtil.sortListOfLists(expect)
+  ListUtil.sortListOfLists(acutal)
   assert acutal == expect
