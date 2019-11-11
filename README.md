@@ -4,9 +4,10 @@
 [![codecov](https://codecov.io/gh/huajianmao/pyleet/branch/master/graph/badge.svg)](https://codecov.io/gh/huajianmao/pyleet)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8115b530daf64bdeb92b8125b627102c)](https://www.codacy.com/manual/huajianmao/pyleet?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=huajianmao/pyleet&amp;utm_campaign=Badge_Grade)
 
-![Language](https://img.shields.io/badge/Language-Python3-green.svg?logo=Python&logoColor=yellow)
-![Update](https://img.shields.io/badge/Update-Daily-green.svg)
-![Progress](https://img.shields.io/badge/progress-15%2F1155-critical.svg)
+![Language](https://img.shields.io/badge/Language-Python3-success.svg?logo=Python&logoColor=yellow)
+![Update](https://img.shields.io/badge/Update-Daily-success.svg)
+![Test Cases](https://img.shields.io/badge/Tests-53-success.svg)
+![Progress](https://img.shields.io/badge/Progress-16%2F1159-critical.svg)
 
 ## Introduction
 Solutions for Leetcode problems in Python3.

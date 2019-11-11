@@ -7,37 +7,66 @@ import json
 import re
 import urllib.request
 
-dirpath = "solutions"
-pattern = "a*[!0000blank].py"
-done = len(fnmatch.filter(os.listdir(dirpath), pattern))
 
-headers = {
-  'Accept': 'application/json, text/javascript, */*; q=0.01',
-  'Content-Type': 'application/json',
-  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1)'
-                ' AppleWebKit/537.36 (KHTML, like Gecko)'
-                ' Chrome/78.0.3904.97 Safari/537.366'
-}
-url = "https://leetcode.com/api/problems/algorithms/"
-request = urllib.request.Request(url=url, headers=headers)
-response = urllib.request.urlopen(request)
-obj = json.loads(response.read().decode('utf-8'))
-total = obj['num_total']
+def getTestsCount():
+  testDir = "tests"
+  testFilePattern = "test_*[!0000blank].py"
+  count = 0
+  for file in fnmatch.filter(os.listdir(testDir), testFilePattern):
+    testFile = os.path.join(testDir, file)
+    text = open(testFile, "r")
+    for line in text:
+      if re.match("def test_*", line):
+        count += 1
+  return count
 
-if total > 1000:
-  print("Progress: " + str(done) + " / " + str(total))
-  ratio = done / total
-  if ratio > 0.8:
-    color = 'success'
-  elif ratio > 0.5:
-    color = 'important'
+
+def getSolutionsCount():
+  dirpath = "solutions"
+  pattern = "a*[!0000blank].py"
+  return len(fnmatch.filter(os.listdir(dirpath), pattern))
+
+
+def getAlgorithmsCount():
+  headers = {
+    'Accept': 'application/json, text/javascript, */*; q=0.01',
+    'Content-Type': 'application/json',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1)'
+                  ' AppleWebKit/537.36 (KHTML, like Gecko)'
+                  ' Chrome/78.0.3904.97 Safari/537.366'
+  }
+  url = "https://leetcode.com/api/problems/algorithms/"
+  request = urllib.request.Request(url=url, headers=headers)
+  response = urllib.request.urlopen(request)
+  obj = json.loads(response.read().decode('utf-8'))
+  return obj['num_total']
+
+
+def updateReadeMe(solutions, tests, total):
+  file = "README.md"
+  if total > 1000:
+    print("Progress: " + str(solutions) + " / " + str(total))
+    ratio = solutions / total
+    if ratio > 0.8:
+      color = 'success'
+    elif ratio > 0.5:
+      color = 'important'
+    else:
+      color = 'critical'
+
+    newStatus = 'Progress-' + str(solutions) + '%2F' + str(total) + '-' + color + '.svg'
+    testStatus = 'Tests-' + str(tests) + '-' + 'success.svg'
+    with fileinput.FileInput(file, inplace=True) as file:
+      for line in file:
+        line = re.sub(r"Progress\-\d+\%2F\d+\-.+\.svg", newStatus, line)
+        line = re.sub(r"Tests\-\d+\-.+\.svg", testStatus, line)
+        print(line, end='')
+
   else:
-    color = 'critical'
+    print("FIXME: some error occurs!!!")
 
-  newStatus = 'progress-' + str(done) + '%2F' + str(total) + '-' + color + '.svg'
-  with fileinput.FileInput('README.md', inplace=True) as file:
-    for line in file:
-      line = re.sub(r"progress\-\d+\%2F\d+\-.+\.svg", newStatus, line)
-      print(line, end='')
-else:
-  print("FIXME: some error occurs!!!")
+
+tests = getTestsCount()
+solutions = getSolutionsCount()
+total = getAlgorithmsCount()
+updateReadeMe(solutions, tests, total)
