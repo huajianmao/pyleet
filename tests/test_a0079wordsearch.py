@@ -1,5 +1,4 @@
 from solutions.a0079wordsearch import Solution
-from utils.listutil import ListUtil
 
 solution = Solution()
 
