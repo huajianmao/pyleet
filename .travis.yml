@@ -3,6 +3,12 @@ language: python
 python:
   - 3.7
 
+addons:
+  sonarcloud:
+    organization: "huajianmao-github"
+    token:
+      secure: "8b98728bb2148a3345eed7dcad9ec21c9d4b9e44"
+
 before_install:
   - python3 --version
   - make init
@@ -11,7 +17,9 @@ before_install:
 install:
     - pip3 install ".[test]" . # install package + test dependencies
 
-script: make # pytest # run tests
+script:
+  -  make # pytest # run tests
+  - sonar-scanner
 
 after_success:
     - codecov # submit coverage
