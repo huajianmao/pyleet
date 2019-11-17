@@ -6,8 +6,8 @@
 
 ![Language](https://img.shields.io/badge/Language-Python3-success.svg?logo=Python&logoColor=yellow)
 ![Update](https://img.shields.io/badge/Update-Daily-success.svg)
-![Test Cases](https://img.shields.io/badge/Tests-82-success.svg)
-![Progress](https://img.shields.io/badge/Progress-23%2F1159-critical.svg)
+![Test Cases](https://img.shields.io/badge/Tests-86-success.svg)
+![Progress](https://img.shields.io/badge/Progress-24%2F1159-critical.svg)
 
 ## Introduction
 Solutions for Leetcode problems in Python3.
