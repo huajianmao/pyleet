@@ -10,9 +10,11 @@ import urllib.request
 
 def getTestsCount():
   testDir = "tests"
-  testFilePattern = "test_*[!0000blank].py"
+  testFilePattern = r'test_a*.py'
   count = 0
   for file in fnmatch.filter(os.listdir(testDir), testFilePattern):
+    if file == 'test_a0000blank.py':
+      continue
     testFile = os.path.join(testDir, file)
     text = open(testFile, "r")
     for line in text:
@@ -23,8 +25,9 @@ def getTestsCount():
 
 def getSolutionsCount():
   dirpath = "solutions"
-  pattern = "a*[!0000blank].py"
-  return len(fnmatch.filter(os.listdir(dirpath), pattern))
+  pattern = r'a*.py'
+  solutions = [solution for solution in fnmatch.filter(os.listdir(dirpath), pattern) if solution != 'a0000blank.py']
+  return len(solutions)
 
 
 def getAlgorithmsCount():
