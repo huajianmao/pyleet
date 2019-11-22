@@ -23,7 +23,6 @@
 #    2     1         2                 3?
 #
 ################################################
-from utils.tree.TreeNode import TreeNode
 
 
 class Solution:
