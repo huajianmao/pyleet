@@ -43,7 +43,29 @@ class TreeNode:
     return root
 
   @classmethod
-  def integerListToString(nums, len_of_list=None):
+  def treeToList(cls, root):
+    # FIXME: bug exists
+    if root is None:
+      return [None]
+    else:
+      result = [root.val]
+      if root.left is None and root.right is None:
+        return result
+
+      if root.left:
+        result += cls.treeToList(root.left)
+      else:
+        result.append(None)
+
+      if root.right:
+        result += cls.treeToList(root.right)
+      elif root.left.left or root.left.right:
+        result.append(None)
+
+      return result
+
+  @classmethod
+  def integerListToString(cls, nums, len_of_list=None):
     if not len_of_list:
       len_of_list = len(nums)
     return json.dumps(nums[:len_of_list])
