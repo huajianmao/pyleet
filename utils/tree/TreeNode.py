@@ -65,6 +65,18 @@ class TreeNode:
       return result
 
   @classmethod
+  def isSame(cls, me, that):
+    if me is None and that is None:
+      return TreeNode
+    if (me is None and that is not None) or (me is not None and that is None):
+      return False
+    if me.val != that.val:
+      return False
+    if not cls.isSame(me.left, that.left):
+      return False
+    return cls.isSame(me.right, that.right)
+
+  @classmethod
   def integerListToString(cls, nums, len_of_list=None):
     if not len_of_list:
       len_of_list = len(nums)
