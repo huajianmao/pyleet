@@ -8,7 +8,7 @@ def test_findKthLargest1():
   k = 2
   expect = 5
   actual = solution.findKthLargest(nums, k)
-  return actual == expect
+  assert actual == expect
 
 
 def test_findKthLargest2():
@@ -16,4 +16,4 @@ def test_findKthLargest2():
   k = 4
   expect = 4
   actual = solution.findKthLargest(nums, k)
-  return actual == expect
+  assert actual == expect
