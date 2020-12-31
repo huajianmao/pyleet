@@ -45,7 +45,7 @@ def getAlgorithmsCount():
   return obj['num_total']
 
 
-def updateReadeMe(solutions, tests, total):
+def updateReadme(solutions, tests, total):
   file = "README.md"
   if total > 1000:
     print("Progress: " + str(solutions) + " / " + str(total))
@@ -72,4 +72,4 @@ def updateReadeMe(solutions, tests, total):
 tests = getTestsCount()
 solutions = getSolutionsCount()
 total = getAlgorithmsCount()
-updateReadeMe(solutions, tests, total)
+updateReadme(solutions, tests, total)
